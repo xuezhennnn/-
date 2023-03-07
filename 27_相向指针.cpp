@@ -4,12 +4,13 @@ public:
         int size = nums.size();
         int left = 0;
         int right = size - 1;
+        //这里要注意有=这个符号，因为有可能两个指针指向同一个
         while(left <= right){
-            //用左指针找到从左面起不等于val的值
+            //用左指针找到从左面起等于val的值
             while(left <= right && nums[left] != val){
                 left++;
             }
-            //用右指针找到等于val的值
+            //用右指针找到不等于val的值
             while(left <= right && nums[right] == val){
                 right--;
             }
